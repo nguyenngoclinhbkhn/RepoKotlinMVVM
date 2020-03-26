@@ -20,4 +20,7 @@ interface RepoDao {
 
     @Query("SELECT * FROM repo WHERE id = :idRepo")
     fun getRepoById(idRepo: Int) : LiveData<Repo>
+
+    @Query("DELETE FROM repo")
+    fun deleteAll()
 }

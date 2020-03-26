@@ -17,7 +17,7 @@ interface API {
     @GET("repositories?")
     fun getRepoStar(@Query("q") nameRepo: String,
                     @Query("sort") star: String,
-                    @Query("order") desc: String): LiveData<JsonElement>
+                    @Query("order") desc: String): Call<JsonElement>
 
     @GET("repositories?")
     fun getRepoUpdate(@Query("q") nameRepo: String,

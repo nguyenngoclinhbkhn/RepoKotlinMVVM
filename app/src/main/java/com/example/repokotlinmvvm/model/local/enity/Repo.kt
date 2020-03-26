@@ -7,11 +7,6 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "repo")
 data class Repo(
-    @PrimaryKey(autoGenerate = true)
-    @NonNull
-    @ColumnInfo(name = "id")
-    var id: Int,
-
     @ColumnInfo(name = "full_name")
     var fullName: String,
 
@@ -28,4 +23,7 @@ data class Repo(
     var language: String
 
 ) {
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    var id: Int ?= null
 }

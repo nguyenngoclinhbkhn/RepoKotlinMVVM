@@ -23,4 +23,7 @@ class RepoViewModel(application: Application) : AndroidViewModel(application) {
     fun deleteRepo(repo: Repo){
         repository.deleteRepo(repo)
     }
+    fun deleteAll(){
+        repository.deleteAll()
+    }
 }
